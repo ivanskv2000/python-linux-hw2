@@ -1,5 +1,5 @@
 import re
-from collections import deque
+from collections import deque  # efficient stack implementation
 from collections.abc import Iterable
 from typing import Union
 
@@ -72,8 +72,8 @@ class Calculator:
 
     def char_attribution(self, char) -> str:
         """
-        Returns the type of a char (in calculator context):
-        - `operand`, if char can be a part of variable (number)
+        Returns the "type" of a char (in calculator context):
+        - `operand`, if char can be a part of a variable (number)
         - `operator`, if char represents a binary operation
         - `parenthesis`
         - `other`
@@ -92,7 +92,11 @@ class Calculator:
 
     def tokenize(self, string) -> Iterable[str]:
         """
-        Yields tokens from a mathematical expression
+        Converts a mathematical expression to a list of tokens
+
+        Parses a string char-by-char and compares previous
+        char type to current, then concludes token's general type
+        and where to start a new token.
         """
 
         token_attribution = self.char_attribution(string[0])
@@ -142,9 +146,10 @@ class Calculator:
     def convert_to_rpn(self, tokenized_expression: list) -> list:
         """
         Converts a tokenized infix expression to reverse Polish notation (RPN)
-        Uses a variation of Dijkstra's "shunting yard" algorithm
+        by using a variation of Dijkstra's "shunting yard" algorithm
 
-        Source: https://web.archive.org/web/20090605032748/http://montcs.bloomu.edu/~bobmon/Information/RPN/infix2rpn.shtml
+        This is a Python implementation of
+        https://web.archive.org/web/20090605032748/http://montcs.bloomu.edu/~bobmon/Information/RPN/infix2rpn.shtml
         """
 
         output = []
