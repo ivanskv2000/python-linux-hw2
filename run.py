@@ -11,6 +11,10 @@ args = parser.parse_args()
 
 
 class bcolors:
+    """
+    ANSI escape sequences (colorful terminal output)
+    """
+
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
