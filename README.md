@@ -26,12 +26,12 @@ pip install -r requirements.txt
 ### Step 2. Run the Calculator
 Just run
 ``` bash
-python3 app_simple.py
+python3 run.py
 ```
-The script does not require any command line arguments. You can ask for a quick overview via `python3 app_simple.py -h`.
+The script does not require any command line arguments. You can ask for a quick overview via `python3 run.py -h`.
 
 ### Step 3 [optional]. Test using `pytest`
-Automated tests are in the `calculator/test_cases.py` file. Of course, all predefined tests are passed successfully by the implementation, but you can add your own tests. To run pytest, do
+Automated tests are in the `test_cases.py` file. Of course, all predefined tests are passed successfully by the implementation, but you can add your own tests. To run pytest, do
 ```bash
 pytest
 ```
@@ -40,6 +40,3 @@ pytest
 - Dijkstra's "shunting yard" algorithm: https://web.archive.org/web/20090605032748/http://montcs.bloomu.edu/~bobmon/Information/RPN/infix2rpn.shtml
 - Evaluation of RPN expressions: https://ru.wikipedia.org/wiki/Обратная_польская_запись#Вычисления_на_стеке
 - How to distinguish unary minus: http://compiler.su/kak-otlichit-unarnyj-minus-ot-binarnogo.php
-
-
-## Example

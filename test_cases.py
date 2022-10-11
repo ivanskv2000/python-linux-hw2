@@ -1,7 +1,7 @@
 import pytest
 import numpy as np 
-from .. import Calculator
-from .. import EmptyInputError, ParenthesesBalancingError, UnknownToken, IncompleteExpression
+from calculator import Calculator
+from calculator import EmptyInputError, ParenthesesBalancingError, UnknownToken, IncompleteExpression
 
 
 def calculate(input_string):
