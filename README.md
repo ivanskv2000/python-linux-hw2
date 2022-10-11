@@ -1,6 +1,6 @@
 # Python and Linux &mdash; HW-2
 
-![calculator](https://user-images.githubusercontent.com/54892573/195099868-9e351963-0504-4112-baa1-f73134af58e4.jpg)
+<img src="https://user-images.githubusercontent.com/54892573/195099868-9e351963-0504-4112-baa1-f73134af58e4.jpg" width="auto" height="400" />
 
 
 ## Description
