@@ -1,6 +1,7 @@
 # Python and Linux &mdash; HW-2
 
-<сюда картинку>
+![calculator](https://user-images.githubusercontent.com/54892573/195099868-9e351963-0504-4112-baa1-f73134af58e4.jpg)
+
 
 ## Description
 This project is devoted to creating a relatively simple line-input calculator. It works in three steps:
