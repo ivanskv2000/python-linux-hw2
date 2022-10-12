@@ -32,6 +32,8 @@ print(f"""
 {bcolors.HEADER}Welcome to my calculator!{bcolors.ENDC}
 Everything is simple: do math, then input 'q' to exit.
 
+Supported operations: '+', '-', '*', '/', '^', '%'.
+
 Docs: https://github.com/ivanskv2000/python-linux-hw2
 
 
