@@ -48,6 +48,9 @@ while True:
         result = bcolors.OKGREEN + str(calc.calculate(query)) + bcolors.ENDC
     except calculator.CalculatorError as e:
         result = bcolors.FAIL + e.message + bcolors.ENDC
+    except ZeroDivisionError:
+        result = "Division by zero is not allowed. Sorry!"
+        result = bcolors.FAIL + result + bcolors.ENDC
     except BaseException as e:
         result = f"Unexpected error occured. Please check your input. <{e}>"
         result = bcolors.FAIL + result + bcolors.ENDC
