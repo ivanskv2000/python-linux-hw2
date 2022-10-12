@@ -88,3 +88,6 @@ class TestErrorHandling:
     def test_incomplete_expressions(self):
         check_exception('5 -', IncompleteExpression)
         check_exception('+2', IncompleteExpression)
+
+    def test_zero_division(self):
+        check_exception('1/0', ZeroDivisionError)
