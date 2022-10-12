@@ -1,7 +1,7 @@
 import re
 from collections import deque  # efficient stack implementation
 from collections.abc import Iterable
-from typing import Union
+from typing import Iterable, Union
 
 
 class CalculatorError(Exception):
