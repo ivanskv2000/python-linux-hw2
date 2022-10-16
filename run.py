@@ -41,22 +41,25 @@ Docs: https://github.com/ivanskv2000/python-linux-hw2
 """
 )
 
-while True:
-    query = input(f"{bcolors.BOLD}Enter math expression:{bcolors.ENDC} ")
-    query = query.strip()
+try:
+    while True:
+        query = input(f"{bcolors.BOLD}Enter math expression:{bcolors.ENDC} ")
+        query = query.strip()
 
-    if query == "q":
-        break
+        if query == "q":
+            break
 
-    try:
-        result = bcolors.OKGREEN + str(calc.calculate(query)) + bcolors.ENDC
-    except calculator.CalculatorError as e:
-        result = bcolors.FAIL + e.message + bcolors.ENDC
-    except ZeroDivisionError:
-        result = "Division by zero is not allowed. Sorry!"
-        result = bcolors.FAIL + result + bcolors.ENDC
-    except BaseException as e:
-        result = f"Unexpected error occured. Please check your input. <{e}>"
-        result = bcolors.FAIL + result + bcolors.ENDC
-    finally:
-        print(result)
+        try:
+            result = bcolors.OKGREEN + str(calc.calculate(query)) + bcolors.ENDC
+        except calculator.CalculatorError as e:
+            result = bcolors.FAIL + e.message + bcolors.ENDC
+        except ZeroDivisionError:
+            result = "Division by zero is not allowed. Sorry!"
+            result = bcolors.FAIL + result + bcolors.ENDC
+        except BaseException as e:
+            result = f"Unexpected error occured. Please check your input. <{e}>"
+            result = bcolors.FAIL + result + bcolors.ENDC
+        finally:
+            print(result)
+except KeyboardInterrupt:
+    pass
